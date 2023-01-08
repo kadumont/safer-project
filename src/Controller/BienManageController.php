@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/bien/manage')]
+#[Route('/bien/admin')]
 class BienManageController extends AbstractController
 {
     #[Route('/', name: 'app_bien_manage_index', methods: ['GET'])]

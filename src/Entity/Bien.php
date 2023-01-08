@@ -91,24 +91,24 @@ class Bien
 
     public function getPrix(): ?int
     {
-        return $this->surface;
+        return $this->prix;
     }
 
-    public function setPrix(int $surface): self
+    public function setPrix(int $prix): self
     {
-        $this->surface = $surface;
+        $this->prix = $prix;
 
         return $this;
     }
 
     public function getSurface(): ?string
     {
-        return $this->prix;
+        return $this->surface;
     }
 
-    public function setSurface(string $prix): self
+    public function setSurface(string $surface): self
     {
-        $this->prix = $prix;
+        $this->surface = $surface;
 
         return $this;
     }
