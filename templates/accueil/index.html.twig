@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+
+
+        <h1>{{ controller_name }}</h1>
+        {% for bien in biens %}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ bien.titre }}</h5>
+                    <p class="card-text">{{ bien.descriptif }}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            </br>
+            
+        {% endfor %}
+
+        <div></div>
+        
+{% endblock %}
