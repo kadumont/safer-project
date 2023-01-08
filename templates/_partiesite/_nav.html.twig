@@ -15,7 +15,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
-        {% if app.user %}
+        {% if is_granted('ROLE_ADMIN') %}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ path('app_categorie_index') }}">Categorie</a>
           </li>
