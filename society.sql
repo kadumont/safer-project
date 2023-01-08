@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 08 jan. 2023 à 19:26
+-- Généré le : dim. 08 jan. 2023 à 23:02
 -- Version du serveur : 10.4.25-MariaDB
 -- Version de PHP : 8.1.10
 
@@ -166,7 +166,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `codepostal`, `email`, `roles`, `password`) VALUES
 (1, 'Dem', 'Orient', '87000', 'demo@gmail.com', '[]', '$2y$13$/nR67ItSUypO16Af9/UX4eKoDU6kiEE4pODk4kchRHJcuodry7P7y'),
-(2, 'Test', 'Toto', '35701', 'test@gmail.com', '[]', '$2y$13$87SFAxQhh1Cjux1aEZ3WKuXWa/CpQV1XVC7UhOPTw.HUUWqRZSdC6');
+(2, 'Test', 'Toto', '35701', 'test@gmail.com', '[]', '$2y$13$87SFAxQhh1Cjux1aEZ3WKuXWa/CpQV1XVC7UhOPTw.HUUWqRZSdC6'),
+(4, 'JORGAN', 'Nathan', '75001', 'admin@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$S2al4jBUHmy7vBoh1tofxuj4FPJbujSPDebWdHTOgE4x1kBVO9v9m');
 
 --
 -- Index pour les tables déchargées
@@ -241,7 +242,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Contraintes pour les tables déchargées
