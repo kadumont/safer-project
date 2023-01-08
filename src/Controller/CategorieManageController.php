@@ -10,13 +10,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+//Utilisation du CDRUD  pour la création de 
 #[Route('/categorie/admin')]
-class CategorieController extends AbstractController
+class CategorieManageController extends AbstractController
 {
     #[Route('/', name: 'app_categorie_index', methods: ['GET'])]
     public function index(CategorieRepository $categorieRepository): Response
     {
-        return $this->render('categorie/index.html.twig', [
+        return $this->render('categorie_manage/index.html.twig', [
             'categories' => $categorieRepository->findAll(),
         ]);
     }
@@ -34,7 +35,7 @@ class CategorieController extends AbstractController
             return $this->redirectToRoute('app_categorie_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('categorie/new.html.twig', [
+        return $this->renderForm('categorie_manage/new.html.twig', [
             'categorie' => $categorie,
             'form' => $form,
         ]);
@@ -43,7 +44,7 @@ class CategorieController extends AbstractController
     #[Route('/{id}', name: 'app_categorie_show', methods: ['GET'])]
     public function show(Categorie $categorie): Response
     {
-        return $this->render('categorie/show.html.twig', [
+        return $this->render('categorie_manage/show.html.twig', [
             'categorie' => $categorie,
         ]);
     }
@@ -60,7 +61,7 @@ class CategorieController extends AbstractController
             return $this->redirectToRoute('app_categorie_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('categorie/edit.html.twig', [
+        return $this->renderForm('categorie_manage/edit.html.twig', [
             'categorie' => $categorie,
             'form' => $form,
         ]);
