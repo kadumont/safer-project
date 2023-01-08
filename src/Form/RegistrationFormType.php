@@ -21,9 +21,11 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('nom', TextType::class, ['attr' =>['class' => 'form-control']])
             ->add('prenom',TextType::class, ['attr' =>['class' => 'form-control']])
-            ->add('codepostal', TextType::class, ['attr' =>['class' => 'form-control']])
+            ->add('codepostal', TextType::class, ['attr' =>['class' => 'form-control'],
+                'label' => 'Code postal'
+            ])
 
-            ->add('email', EmailType::class)
+            ->add('email', EmailType::class, ['attr' =>['class' => 'form-control']])
 
             ->add('RGPDConsent', CheckboxType::class, [
                 'mapped' => false,
@@ -32,7 +34,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
-                'label' => 'En m\'inscrivant à ce site, j\'accepte de partager mes données pour mon inscription.'
+                'label' => 'En m\'inscrivant à ce site, j\'accepte de partager mes données pour mon inscription '
             ])
 
             ->add('plainPassword', PasswordType::class, [
