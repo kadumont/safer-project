@@ -2,7 +2,7 @@
 <header>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand navsaf" href="">SAFER</a>
+    <a class="navbar-brand navsaf" href="{{ path('app_accueil') }}">SAFER</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,11 @@
             <a class="nav-link" aria-current="page" href="{{ path('app_bien_manage_index') }}">Bien</a>
           </li>          
         {% endif %}
-        
+        {% if is_granted('ROLE_USER') %}
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/bien/profil">Bien</a>
+          </li>  
+        {% endif %}   
         <li class="nav-item">
           <a class="nav-link" href="#">Contactez nous</a>
         </li>
