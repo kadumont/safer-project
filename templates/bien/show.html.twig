@@ -3,7 +3,7 @@
 {% block title %}Bien{% endblock %}
 
 {% block body %}
-    <h1>Bien</h1>
+<h1 class ="text-center mt-4" >Bien</h1>
 
     <table class="table">
         <tbody>
@@ -37,10 +37,4 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('app_bien_manage_index') }}">back to list</a>
-
-    <a href="{{ path('app_bien_manage_edit', {'id': bien.id}) }}">edit</a>
-
-    {{ include('bien_manage/_delete_form.html.twig') }}
 {% endblock %}
