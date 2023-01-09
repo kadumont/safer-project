@@ -21,25 +21,6 @@ class FavorisManagerController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_favoris_manager_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, FavorisRepository $favorisRepository): Response
-    {
-        $favori = new Favoris();
-        $form = $this->createForm(FavorisType::class, $favori);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $favorisRepository->save($favori, true);
-
-            return $this->redirectToRoute('app_favoris_manager_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('favoris_manager/new.html.twig', [
-            'favori' => $favori,
-            'form' => $form,
-        ]);
-    }
-
     #[Route('/{id}', name: 'app_favoris_manager_show', methods: ['GET'])]
     public function show(Favoris $favori): Response
     {
