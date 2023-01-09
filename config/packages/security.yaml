@@ -32,6 +32,16 @@ security:
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/profile, roles: ROLE_USER }
+    
+    role_hierarchy:
+        ROLE_USER : ROLE_USER
+        ROLE_ADMIN : ROLE_ADMIN
+        ROLE_PORTEUR_PROJET : ROLE_USER
+
+        # Un user peut se connecter, consulter les différentes catégories de biens et ajouter ces derniers à ses favoris
+        # Un admin peut se connecter, ajouter, modifier et supprimer une catégorie de bien
+        # Un porteur de projet peut se connecter, consulter les biens par catégorie, les ajouter à ses favoris et se les faire envoyer par mail
+
 
 when@test:
     security:
