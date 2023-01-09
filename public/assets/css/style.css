@@ -3,8 +3,18 @@
             background-size: 270px 200px;
             background-repeat: no-repeat;
         }
-        
+
         .navsaf {
             color: rgb(25, 172, 64);
             font-weight: bold;
+        }
+
+        .nous-success {
+            background-color: rgb(8, 158, 48);
+            color: white;
+        }
+
+        .nous-success:hover {
+            background-color: rgb(147, 148, 147);
+            color: white;
         }
