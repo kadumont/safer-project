@@ -1,5 +1,10 @@
-.bd-placeholder-img {
-    background-image: url(/assets/images/istockphoto-1357365823-612x612.jpg);
-    background-size: 270px 200px;
-    background-repeat: no-repeat;
-}
+        .bd-placeholder-img {
+            background-image: url(/assets/images/istockphoto-1357365823-612x612.jpg);
+            background-size: 270px 200px;
+            background-repeat: no-repeat;
+        }
+        
+        .navsaf {
+            color: rgb(25, 172, 64);
+            font-weight: bold;
+        }
