@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Favoris index{% endblock %}
+{% block title %}Liste de Favoris{% endblock %}
 
 {% block body %}
     <h1>Favoris index</h1>
@@ -8,18 +8,17 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>actions</th>
+                <th>Nom Client</th>
+                <th>Prenom Client</th>
+                <th>Titre du Bien</th>
             </tr>
         </thead>
         <tbody>
         {% for favori in favoris %}
             <tr>
-                <td>{{ favori.id }}</td>
-                <td>
-                    <a href="{{ path('app_favoris_manager_show', {'id': favori.id}) }}">show</a>
-                    <a href="{{ path('app_favoris_manager_edit', {'id': favori.id}) }}">edit</a>
-                </td>
+                <td>{{ favori.user.nom }}</td>
+                <td>{{ favori.user.prenom }}</td>
+                <td>{{ favori.bien.titre }}</td>
             </tr>
         {% else %}
             <tr>
