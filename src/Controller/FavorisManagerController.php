@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/favoris/manager')]
+#[Route('/favoris/admin')]
 class FavorisManagerController extends AbstractController
 {
     #[Route('/', name: 'app_favoris_manager_index', methods: ['GET'])]
@@ -64,15 +64,5 @@ class FavorisManagerController extends AbstractController
             'favori' => $favori,
             'form' => $form,
         ]);
-    }
-
-    #[Route('/{id}', name: 'app_favoris_manager_delete', methods: ['POST'])]
-    public function delete(Request $request, Favoris $favori, FavorisRepository $favorisRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$favori->getId(), $request->request->get('_token'))) {
-            $favorisRepository->remove($favori, true);
-        }
-
-        return $this->redirectToRoute('app_favoris_manager_index', [], Response::HTTP_SEE_OTHER);
     }
 }
