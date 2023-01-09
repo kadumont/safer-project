@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 08 jan. 2023 à 23:02
+-- Généré le : lun. 09 jan. 2023 à 02:50
 -- Version du serveur : 10.4.25-MariaDB
 -- Version de PHP : 8.1.10
 
@@ -32,47 +32,11 @@ CREATE TABLE `bien` (
   `titre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `descriptif` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `codepostal` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `surface` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `surface` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `prix` int(11) NOT NULL,
   `typeachat` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `categorie_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `bien`
---
-
-INSERT INTO `bien` (`id`, `titre`, `descriptif`, `codepostal`, `surface`, `prix`, `typeachat`, `categorie_id`) VALUES
-('17.03.017', 'Activités Equestres, Apiculture, Chasse', 'Propriété Charente-Maritime', '17200', '17Ha', 330000, 'Vente', 5),
-('19.07.118', 'FERME 100% HERBAGERE/ ELEVAGE LAITIER', 'Située à l\'orée d\'un bourg, à 10 minutes des services et commerces.', '34Ha', '950', 35200, 'Location', 5),
-('23.16.104', 'Propriété Creuse', 'Dans un hameau à moins de 10 minutes d\'un bourg avec services et commerces, et d\'un village ayant un intérèt touristique sur les routes de St-Jacques-de-Compostelle.', '23320', '1Ha55', 860, 'Location', 4),
-('30VI9700', 'Propriété Gard', 'Ensemble immobilier proche d\'un plan d\'eau aménagé', '34290', '29Ha', 2000, 'Location', 5),
-('313453DR', 'Idéal société de chasse', 'Terrain boisé classé ONF', '22700', '35Ha', 120000, 'Vente', 3),
-('344334UJ', 'Sapinière', 'Sapinière en cours de bail, cherche reprise', '35200', '1,8Ha', 800, 'Location', 3),
-('345E7EG', 'Bois sur pied', 'Diverses essences sur place', '29510', '6Ha', 30000, 'Vente', 3),
-('34AG10897', 'Tourisme rural-hébergement', 'Au nord de l\'Hérault, proche des axes routiers et à 45 minutes de Montpellier', '34070', '1Ha90', 1490000, 'Vente', 4),
-('34VI6979', 'Propriété viticole et sa cave', 'Au coeur de l\'appellation Saint-Chinian', '34280', '30Ha', 1500000, 'Vente', 3),
-('38TB22187', 'Vallons du Voironnais', '13 Ha de terrain', '38500', '13Ha', 2000, 'Location', 1),
-('43LM220118', 'Prairies en pays glazik', 'Usage petits animaux type caprins', '29510', '1ha22', 15000, 'Vente', 2),
-('44 22 AN 08', 'Bâtiments avicoles à transmettre', 'Site avicole à transmettre sur la commune de Nort-sur-Erdre, au nord de Nantes.', '44220', '2Ha', 200000, 'Vente', 4),
-('47.06.098', 'PRET A USAGE sur 95 ha - PLAINE DES VOSGES ', ' A 5 min de Villeneuve-sur-Lot', '47300', '14Ha', 11000, 'Location', 1),
-('48EL11345', 'Propriété Lozère', 'Ensemble bâti avec environ 1ha55', '48370', '1Ha55', 700, 'Location', 4),
-('48RE11201', 'Situé à 15 minutes de Mende', 'idéal pour polyculture sur 14 ha', '30430', '10Ha', 1300, 'Location', 1),
-('55VS', 'Propriété Meuse', 'FERME DE COURUPT : Secteur Sainte-Menehould / Clermont-en-Argonne / Revigny', '88340', '59Ha', 0, 'Location', 5),
-('5667DB', 'Ancienne ferme équestre en ruine', 'Terrains actuellement loués', '29510', '12Ha', 156000, 'Vente', 1),
-('64.02.59', 'Productions végétales', 'La parcelle se situe dans le Barn sur la commune de LAGOR.', '64150', '2Ha', 7700, 'Vente', 2),
-('64.03.60', 'Propriété située dans un secteur vallonné', 'Propriété Pyrénées-Atlantiques', '23500', '6Ha', 650, 'Location', 4),
-('65.23.876', 'Terrain classé T4', 'cloturé et partiellement boisé', '56500', '1,2Ha', 500, 'Location', 3),
-('7629CA', 'Prairies sur les plateaux', 'Parcelle de terre labourable d\'environ 2 ha', '81090', '76Ha', 400000, 'Vente', 2),
-('765DN', 'Prairies orientées nord ouest', 'Lot d\'un seul tenant', '56500', '11Ha', 113000, 'Vente', 2),
-('76RZDC', 'Terrain proche cours d\'eau', 'Non accessible par la route, uniquement chemin d\'exploitation', '35200', '5,5Ha', 3000, 'Location', 2),
-('81EL11100', 'Secteur du Ségala-Viaur', 'les secteurs les plus en pente sont empiérés', '12200', '54Ha', 400000, 'Vente', 3),
-('88 FB ', 'Vittel Dombrot : Ouest vosgien, secteur de VITTEL', 'Terrains d\'environ 6,5 ha', '88170', '6,5Ha', 0, 'Vente', 1),
-('9875RDC', 'Terrain avec abri', 'Pour propriétaire équin', '44110', '1,2Ha', 1200, 'Location', 2),
-('AA 72 22 0088 R', 'Exploitation Agricole spécialisée en polyculture élevage', 'Exploitation située dans le Sud Est de La Sarthe, entre la commune d\'Ecommoy (72220) et Sarcé (72327)', '72220', '87Ha', 0, 'Vente', 5),
-('MQ14170356 ', 'Propriété Calvados', 'JFD : Noue de Sienne (14)', '14380', '17Ha', 173, 'Vente', 5),
-('QDSGF56', 'Bois domainial', 'Bois accessible avec sentiers', '44110', '32Ha', 12000, 'Location', 3),
-('Z34.345.45', 'Légérement en Pente', 'Idéal paturage moutons', '22700', '3,4Ha', 2400, 'Location', 2);
 
 -- --------------------------------------------------------
 
@@ -84,17 +48,6 @@ CREATE TABLE `categorie` (
   `id` int(11) NOT NULL,
   `libelle` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Déchargement des données de la table `categorie`
---
-
-INSERT INTO `categorie` (`id`, `libelle`) VALUES
-(1, 'Terrain agricole'),
-(2, 'Prairie'),
-(3, 'Bois'),
-(4, 'Bâtiments'),
-(5, 'Exploitations');
 
 -- --------------------------------------------------------
 
@@ -114,7 +67,8 @@ CREATE TABLE `doctrine_migration_versions` (
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
 ('DoctrineMigrations\\Version20230108103227', '2023-01-08 11:32:41', 409),
-('DoctrineMigrations\\Version20230108132058', '2023-01-08 14:21:04', 30);
+('DoctrineMigrations\\Version20230108132058', '2023-01-08 14:21:04', 30),
+('DoctrineMigrations\\Version20230108235114', '2023-01-09 00:51:24', 686);
 
 -- --------------------------------------------------------
 
@@ -167,7 +121,14 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `nom`, `prenom`, `codepostal`, `email`, `roles`, `password`) VALUES
 (1, 'Dem', 'Orient', '87000', 'demo@gmail.com', '[]', '$2y$13$/nR67ItSUypO16Af9/UX4eKoDU6kiEE4pODk4kchRHJcuodry7P7y'),
 (2, 'Test', 'Toto', '35701', 'test@gmail.com', '[]', '$2y$13$87SFAxQhh1Cjux1aEZ3WKuXWa/CpQV1XVC7UhOPTw.HUUWqRZSdC6'),
-(4, 'JORGAN', 'Nathan', '75001', 'admin@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$S2al4jBUHmy7vBoh1tofxuj4FPJbujSPDebWdHTOgE4x1kBVO9v9m');
+(4, 'Jordan', 'Nathan', '75001', 'admin@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$S2al4jBUHmy7vBoh1tofxuj4FPJbujSPDebWdHTOgE4x1kBVO9v9m'),
+(5, 'Titi', 'Stage', '87200', 'titi@gmail.com', '[\"ROLE_PORTEUR_PROJET\"]', '$2y$13$R5xp5PKH71/.B1xVy23xaej2z49SCaJOJbFLK7QMKLcsUjRZMhtGC'),
+(13, 'Gambier', 'Benoit', '75001', 'admin@demofr', '[\"ROLE_ADMIN\"]', '$2y$13$x3fQ3sY6pDaTaE84Zze/VOp9z9yaf8fFPEvCQzxvZBiqFv4iJYgea'),
+(14, 'Diaz', 'Caroline', '74425', 'kaubry@robin.fr', '[\"ROLE_USER\"]', '$2y$13$VkUJth8jQ8FLM29x8L2v3OwMnuv1fiYDiZa3TL1o3knDYgiq2vHEq'),
+(15, 'Camus', 'Luc', '29357', 'frederic54@free.fr', '[\"ROLE_USER\"]', '$2y$13$K9b989C8W5upo1rRhWlbpenG62clMe70G0F3U5hXAuRl5348VPEny'),
+(16, 'Denis', 'Susan', '90455', 'dossantos.marthe@aubert.fr', '[\"ROLE_USER\"]', '$2y$13$pg1mAKd86KGp.YnXDWnKEuevIEHBB8ogmsv28V3wCrtf.ejErLysq'),
+(17, 'Bodin', 'Benoît', '06265', 'gros.richard@pasquier.org', '[\"ROLE_USER\"]', '$2y$13$z4UQG9RWXA6BkfHhvYEtDu/Hh/QOt85NY27flisj.cGO3QNgZ/wCK'),
+(18, 'Fontaine', 'Thierry', '00880', 'bernier.olivie@duval.com', '[\"ROLE_PORTEUR_PROJET \"]', '$2y$13$09tAOAeEL6AgK6SQd07H3OJPCHIHtQT3SMcljQT3hnbus.W.LxRva');
 
 --
 -- Index pour les tables déchargées
@@ -224,7 +185,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `favoris`
@@ -242,7 +203,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Contraintes pour les tables déchargées
