@@ -69,7 +69,7 @@
                 {% endif %}
                 <h4 class="mt-2">{{ bien.titre }}</h4>
                 <p>{{ bien.descriptif }}</p>
-                <p><a href="/bien/profil/{{bien.id}}" class="btn nous-success">Go somewhere</a></p>
+                <p><a href="/bien/profil/{{bien.id}}" class="btn nous-success">Voir plus</a></p>
             </div><!-- /.col-lg-4 -->
         {% endfor %}
 
@@ -82,11 +82,11 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        <h2 class="featurette-heading">Service en ligne pour voir les biens</h2>
+        <p class="lead">Nouveau service en ligne pour consulter le prix des terres</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{ asset('assets/images/rural-landscape-with-rice-fields.jpg') }}" </img>
 
       </div>
     </div>   

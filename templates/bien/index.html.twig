@@ -7,7 +7,7 @@
 <div class="container marketing">
 <!-- Three columns of text below the carousel -->
 <div class="row">
-    <h1 class="mb-2 mt-2">Nos Biens</h1>
+    <h1 class ="text-center" >Nos biens</h1>
 
     {% for bien in biens %}
         <div class="col-lg-4">
@@ -18,7 +18,7 @@
             {% endif %}
             <h4 class="mt-2">{{ bien.titre }}</h4>
             <p>{{ bien.descriptif }}</p>
-            <p><a href="#" class="btn btn-primary">Go somewhere</a></p>
+            <p><a href="/bien/profil/{{bien.id}}" class="btn nous-success">Voir plus</a></p>
         </div><!-- /.col-lg-4 -->
     {% endfor %}
 {% endblock %}
