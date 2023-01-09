@@ -28,4 +28,3 @@ class BienController extends AbstractController
         ]);
     }
 }
-
